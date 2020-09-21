@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#"><img src="https://www.bancosol.com.bo/sites/all/themes/bancosol_theme/logo.png" style="width: 70%; height: 55%;"><span class="sr-only">(current)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav mx-auto mb-1 nav-pills" role="tablist">
+            
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" routerLink="/quienes" role="tab" aria-selected="true">QUIENES SOMOS</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" routerLink="/contacto" role="tab" aria-selected="false">CONTACTENOS</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="pill" routerLink="/testimonio" role="tab" aria-selected="false">TESTIMONIOS</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-warnin mr-sm-2" type="submit" (click)="goTo('./registro')">REGISTRAR</button>
+            <button class="btn btn-warnin my-2 my-sm-0" type="submit" (click)="goTo('./ingresar')">INGRESAR</button>
+        </form>
+    </div>
+</nav>
