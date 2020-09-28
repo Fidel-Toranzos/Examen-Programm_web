@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
+  {
+    path: 'module1',
+    loadChildren: () => import('./solnet/solnet.module').then(m => m.SolnetModule)
+  }
 ];
 
 @NgModule({
