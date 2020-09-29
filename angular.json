@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ExamenBanco": {
+    "Banco": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ExamenBanco",
+            "outputPath": "dist/Banco",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,12 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -70,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ExamenBanco:build"
+            "browserTarget": "Banco:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ExamenBanco:build:production"
+              "browserTarget": "Banco:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ExamenBanco:build"
+            "browserTarget": "Banco:build"
           }
         },
         "test": {
@@ -118,15 +119,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ExamenBanco:serve"
+            "devServerTarget": "Banco:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ExamenBanco:serve:production"
+              "devServerTarget": "Banco:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ExamenBanco"
+    }
+  },
+  "defaultProject": "Banco"
 }

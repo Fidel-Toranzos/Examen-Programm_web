@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "solnet-d7116": {
+      "hosting": {
+        "Banco": [
+          "solnet-d7116"
+        ]
+      }
+    }
+  }
+}

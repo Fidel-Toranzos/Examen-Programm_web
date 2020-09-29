@@ -1,21 +1,28 @@
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { SendEmailComponent } from './auth/send-email/send-email.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    SendEmailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
-  schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

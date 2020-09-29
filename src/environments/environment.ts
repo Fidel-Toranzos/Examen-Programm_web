@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: 'AIzaSyAMyiBSSq749ZMU8zE5__9rVjb_i0nJ1lw',
+    authDomain: 'solnet-d7116.firebaseapp.com',
+    databaseURL: 'https://solnet-d7116.firebaseio.com',
+    projectId: 'solnet-d7116',
+    storageBucket: 'solnet-d7116.appspot.com',
+    messagingSenderId: '1040872049015',
+    appId: '1:1040872049015:web:c3c969acf2b7262de9f972',
+  },
 };
 
 /*

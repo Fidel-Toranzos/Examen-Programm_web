@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand"><img src="https://www.bancosol.com.bo/sites/all/themes/bancosol_theme/logo.png" style="width: 70%; height: 55%;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav mx-auto mb-1 nav-pills" role="tablist" *ngIf="user$ | async as user; else login"> 
+            <li class="nav-item" *ngIf="!user" role="presentation">
+                <a class="nav-link" data-toggle="pill" routerLink="/login" role="tab" aria-selected="true">INGRESAR</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" (click)="onLogout()">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">{{user?.email}}</a>
+            </li>
+        </ul>
+        <ng-template #login>
+            <ul class="nav navbar-nav mx-auto nav-pills" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-toggle="pill" routerLink="/" role="tab" aria-selected="true">HOGAR</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="pill" routerLink="/login" role="tab" aria-selected="true">INGRESAR</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="pill" routerLink="/register" role="tab" aria-selected="true">REGISTRAR</a>
+                </li>
+            </ul>
+        </ng-template>
+    </div>
+</nav>   
