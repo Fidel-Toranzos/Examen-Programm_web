@@ -29,7 +29,8 @@
                         <label for="acceptTerms" class="form-check-label">Aceptar terminos & Condiciones</label>
                         <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Aceptar terminos & Condiciones es requerido</div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg">Registrar</button>
+                    <button type="submit" class="btn btn-primary btn-lg mr-sm-2">Registrar</button>
+                    <button class="btn btn-secondary btn-lg my-2 my-sm-0" type="reset" (click)="onReset()">Cancelar</button>
                 </form>
                 <div class="form-group mt-3">
                     <p>Usted tiene una cuenta? <a [routerLink]="['/login']"> Ingresa a SOLNET</a></p>
