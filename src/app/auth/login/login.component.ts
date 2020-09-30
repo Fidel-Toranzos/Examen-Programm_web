@@ -33,7 +33,8 @@ async onLogin(){
     }else if(user){
       this.router.navigate(['/solnet']);
     }else{
-      this.router.navigate(['/register']);
+      window.alert("Cuenta Invalida, por favor ingrese una cuenta valida");
+      this.router.navigate(['/login']);
     }
   }
   catch(error){
